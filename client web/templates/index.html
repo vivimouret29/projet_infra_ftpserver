@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home de {{user}}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+</head>
+{{ls_res}}
+
+<body>
+
+    <div class=container>
+        <h1>Ftp de {{user}}</h1>
+        <div class=container>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">nom</th>
+                        <th scope="col">date dernière modif.</th>
+                        <th scope="col">taille</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope='row'> </th>
+                        <td>
+                            <a id=1 class=dir href="/index">{{ls_res[0][8]}}</a>
+                        </td>
+                        <td>{{ls_res[0][6]}} {{ls_res[0][5]}} - {{ls_res[0][7]}}</td>
+                        <td>{{ls_res[0][4]}}</td>
+                        <td><input class='button' type='submit' value='Submit'></td>
+                    </tr>
+                    <tr>
+                        <th scope='row'> </th>
+                        <td>{{ls_res[1][8]}}</td>
+                        <td>{{ls_res[1][6]}} {{ls_res[1][5]}} - {{ls_res[1][7]}}</td>
+                        <td>{{ls_res[1][4]}}</td>
+                        <td><input class='button' type='submit' value='Submit'></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>
